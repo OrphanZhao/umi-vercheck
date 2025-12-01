@@ -1,0 +1,46 @@
+{
+  "name": "umi-vercheck",
+  "version": "1.0.0",
+  "description": "UmiJS 版本检查插件 - 检测应用更新并提示用户刷新",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsc && npm run copy:template",
+    "copy:template": "node scripts/copy-template.js",
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "umi",
+    "umi-plugin",
+    "version-check",
+    "spa",
+    "refresh",
+    "update",
+    "version",
+    "check"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OrphanZhao/umi-vercheck.git"
+  },
+  "homepage": "https://github.com/OrphanZhao/umi-vercheck#readme",
+  "bugs": {
+    "url": "https://github.com/OrphanZhao/umi-vercheck/issues"
+  },
+  "author": "class moon <57883335+OrphanZhao@users.noreply.github.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "umi": ">=4.0.0",
+    "react": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/react": "^18.0.0",
+    "umi": "^4.0.0",
+    "typescript": "^5.0.0"
+  }
+}
