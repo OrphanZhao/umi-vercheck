@@ -17,7 +17,9 @@ export const VersionCheck: React.FC<VersionCheckProps> = ({
     const isProduction = process.env.NODE_ENV === "production";
     if (!isProduction) return;
 
-    const worker = new Worker("/versionCheck.worker.js");
+    // 添加时间戳避免缓存
+    const workerUrl = `/versionCheck.worker.js?t=${Date.now()}`;
+    const worker = new Worker(workerUrl);
 
     worker.onmessage = (event) => {
       const { type, payload } = event.data;
